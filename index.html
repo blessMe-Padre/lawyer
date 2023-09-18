@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридические услуги</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="h-screen grid grid-rows-[auto_1fr_auto]">
+        <header class="z-10 w-full md-28 transition-colors">
+            <div class="container gap-5 items-center justify-between hidden md:flex md:pt-2">
+                <!-- <img class="h-24" loading="lazy" src="./src/img/logo.jpg" width="228" height="98" alt="лого"> -->
+                <span>ЛОГОТИП</span>
+                <ul class="flex gap-2 flex-wrap text-main-black">
+                    <li class="mr-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                            data-goto=".page-section-1">Ссылка 1</a></li>
+                    <li class="mr-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                            data-goto=".page-section-2">Ссылка 2</a></li>
+                    <li class="mr-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                            data-goto=".page-section-3">Ссылка 3</a></li>
+                    <li class="mr-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                            data-goto=".page-section-4">Ссылка 4</a></li>
+                </ul>
+                <a class="header-call-button" href="#">Записаться</a>
+            </div>
+
+            <!-- мобильное меню -->
+            <div class="flex flex-col items-start justify-between pt-20 overflow-hidden md:hidden">
+                <!-- <img loading="lazy" class="absolute top-5 left-5" src="./src/img/logo.jpg" width="114" height="48"
+                    alt="лого"> -->
+                <div class="mobile-menu bg-metal">
+                    <ul class="flex flex-col pb-11 text-main-black pt-4">
+                        <li class="px-4 mb-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                                data-goto=".page-section-1">Ссылка 1</a>
+                        </li>
+                        <li class="px-4 mb-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                                data-goto=".page-section-2">Ссылка 2</a>
+                        </li>
+                        <li class="px-4 mb-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                                data-goto=".page-section-3">Ссылка 3</a></li>
+                        <li class="px-4 mb-4"><a class="text-white hover:text-orange transition-colors nav-link" href="#"
+                                data-goto=".page-section-4">Ссылка 4</a></li>
+                    </ul>
+                    <a class="header-call-button block w-full mx-3" href="#">Записаться</a>
+                </div>
+
+                <button class="btn-close-menu md:hidden absolute top-5 right-5">
+                    <svg viewBox="0 0 64 48">
+                        <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                        <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                        <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero h-screen">
+                <div class="container h-full flex items-center text-9xl text-orange">
+                    <div>
+                        <h1>Это супер жесткий слоган</h1>
+                    </div>
+               </div>
+            </section>
+
+        </main>
+
+        <footer class="py-12 bg-orange">
+            footer 
+        </footer>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
