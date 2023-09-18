@@ -139,14 +139,16 @@
                                 физическими и юридическими лицами позволяет мне предложить вам высококачественные
                                 юридические услуги по доступным ценам.”</h2>
                             <div class="flex-shrink-0 flex-grow-0 mb-5">
-                                <img class="w-full h-full object-cover" src="./src/img/person/person-1.jpg" alt="">
+                                <img class="w-full h-full object-contain md:object-cover max-h-[600px]"
+                                    src="./src/img/person/person-1.jpg" alt="">
                             </div>
                             <p class="max-w-3xl text-lg md:text-xl mb-5">Быстрое реагирование, глубокое понимание
                                 специфики вашей ситуации и умение находить нестандартные решения – мои основные
                                 преимущества как юриста. Доверьте мне решение ваших проблем, и я гарантирую
                                 профессиональный подход к делу и полную конфиденциальность.</p>
                             <div class="flex-shrink-0 flex-grow-0 mb-5">
-                                <img class="w-full h-full object-cover" src="./src/img/person/person-2.jpg" alt="">
+                                <img class="w-full h-full object-contain md:object-cover max-h-[600px]"
+                                    src="./src/img/person/person-2.jpg" alt="">
                             </div>
                             <p class="max-w-3xl text-lg md:text-xl mb-5">Мы предлагаем комплексное юридическое
                                 сопровождение
@@ -156,7 +158,8 @@
                                 другое. Наша команда профессионалов имеет обширный опыт работы с различными сферами
                                 права, что позволяет нам предоставлять высококачественные услуги по доступным ценам.</p>
                             <div class="flex-shrink-0 flex-grow-0 mb-5">
-                                <img class="w-full h-full object-cover" src="./src/img/person/person-2.jpg" alt="">
+                                <img class="w-full h-full object-contain md:object-cover max-h-[600px]"
+                                    src="./src/img/person/person-2.jpg" alt="">
                             </div>
                             <p class="max-w-3xl text-lg md:text-xl mb-5">Мы гарантируем конфиденциальность и
                                 индивидуальный
@@ -169,11 +172,17 @@
                 </section>
             </div>
 
-            <!-- <section class="services py-10">
+            <section class="services py-10">
                 <div class="container">
                     <h2 class="text-4xl mb-6">Услуги</h2>
-                    <div class="grid grid-cols-2 gap-16">
-                        <div class="flex flex-col justify-between">
+                    <div class="grid md:grid-cols-2 gap-16 _tabs">
+
+                        <nav class="program__nav">
+                            <button class="_tabs-item _active" data-tab="#tab1">Физики</button>
+                            <button class="_tabs-item" data-tab="#tab2">Юрики</button>
+                        </nav>
+
+                        <div class="flex flex-col justify-between _tabs-block _active" id="tab1">
                             <div>
                                 <h3 class="text-lg mb-5 font-semibold">Услуги юриста для физических лиц</h3>
                                 <p class="mb-2">В современном мире каждый из нас сталкивается с различными юридическими
@@ -189,19 +198,21 @@
                                 </p>
                             </div>
 
-                            <ul class="mt-10 grid grid-cols-2 gap-6">
-                                <li class="bg-orange p-5">консультация по всем вопросам, связанным с законодательством
+                            <ul class="mt-10 sm:grid sm:grid-cols-2 gap-6">
+                                <li class="bg-orange p-5 mb-3">консультация по всем вопросам, связанным с
+                                    законодательством
                                 </li>
-                                <li class="bg-orange p-5">составление и анализ договоров, соглашений, претензий и других
+                                <li class="bg-orange p-5 mb-3">составление и анализ договоров, соглашений, претензий и
+                                    других
                                     документов;</li>
-                                <li class="bg-orange p-5">представление интересов клиента в судах и других органах
+                                <li class="bg-orange p-5 mb-3">представление интересов клиента в судах и других органах
                                     власти;</li>
-                                <li class="bg-orange p-5">сопровождение сделок с недвижимостью;
+                                <li class="bg-orange p-5 mb-3">сопровождение сделок с недвижимостью;
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="flex flex-col justify-between">
+                        <div class="flex flex-col justify-between _tabs-block" id="tab2">
                             <div>
                                 <h3 class="text-lg mb-5 font-semibold">Услуги юриста для юридических лиц</h3>
                                 <p class="mb-2">В современном мире каждый из нас сталкивается с различными юридическими
@@ -216,20 +227,23 @@
                                     в следующих вопросах:
                                 </p>
                             </div>
-                            <ul class="mt-8 grid grid-cols-2 gap-4">
-                                <li class="bg-orange p-5">консультация по всем вопросам, связанным с законодательством
+                            <ul class="mt-8 sm:grid sm:grid-cols-2 gap-4">
+                                <li class="bg-orange p-5 mb-3">консультация по всем вопросам, связанным с
+                                    законодательством
                                 </li>
-                                <li class="bg-orange p-5">составление и анализ договоров, соглашений, претензий и других
+                                <li class="bg-orange p-5 mb-3">составление и анализ договоров, соглашений, претензий и
+                                    других
                                     документов;</li>
-                                <li class="bg-orange p-5">представление интересов клиента в судах и других органах
+                                <li class="bg-orange p-5 mb-3">представление интересов клиента в судах и других органах
                                     власти;</li>
-                                <li class="bg-orange p-5">сопровождение сделок с недвижимостью;
+                                <li class="bg-orange p-5 mb-3">сопровождение сделок с недвижимостью;
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
-            </section> -->
+            </section>
         </main>
 
         <footer class="py-12 bg-orange">
