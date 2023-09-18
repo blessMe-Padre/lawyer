@@ -43,6 +43,10 @@
     color: #5278DA;
 }
 
+.person-button {
+    @apply py-3 px-8 bg-orange rounded-[160px] text-white font-semibold w-44 text-center border-solid border-orange border-[2px] block hover:text-orange hover:bg-transparent transition-all;
+}
+
 /* Прочие классы */
 
 .lock {
