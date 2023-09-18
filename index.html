@@ -61,18 +61,19 @@
 
         <main>
             <section class="hero h-screen">
-                <div class="container h-full flex items-center text-9xl text-orange">
+                <div class="container h-full flex items-center text-5xl md:text-9xl text-orange">
                     <div>
                         <h1>Это супер жесткий слоган</h1>
                     </div>
                 </div>
             </section>
 
-            <section class="person">
+            <section class="person py-10">
                 <div class="container">
-                    <div class="person__wrapper grid gap-7 grid-cols-2 mb-10">
+                    <div class="person__wrapper grid gap-7 md:grid-cols-2 mb-10">
                         <div>
-                            <img class="w-full h-full object-cover" src="./src/img/person/person-1.jpg" alt="персона-1">
+                            <img class="w-full max-h-[600px] md:h-full object-contain md:object-cover"
+                                src="./src/img/person/person-1.jpg" alt="персона-1">
                         </div>
 
                         <div>
@@ -100,8 +101,8 @@
                         </div>
                     </div>
 
-                    <div class="person__wrapper grid gap-7 grid-cols-2">
-                        <div>
+                    <div class="person__wrapper flex flex-col md:grid md:grid-cols-2 gap-7">
+                        <div class="order-2">
                             <h2 class="text-2xl mb-2">Юрист Питер Джонс</h2>
                             <p class="text-orange mb-8">исполнительный директор</p>
                             <p class="mb-4">Юрист Питер Джонс начал свою карьеру сразу после окончания Оксфордского
@@ -119,8 +120,9 @@
                                 молодежи.</p>
                             <a class="person-button" href="#">Подробнее</a>
                         </div>
-                        <div>
-                            <img class="w-full h-full object-cover" src="./src/img/person/person-2.jpg" alt="персона-2">
+                        <div class="order-1 flex-auto md:order-2">
+                            <img class="w-full max-h-[600px] md:h-full object-contain md:object-cover"
+                                src="./src/img/person/person-2.jpg" alt="персона-2">
                         </div>
                     </div>
                 </div>
@@ -130,30 +132,35 @@
                 <section class="sectionPin">
                     <div class="pin-wrap-sticky">
                         <div class="pin-wrap">
-                            <h2 class="max-w-3xl text-xl">“Ваши права и законные интересы под надежной защитой!
+                            <h2 class="max-w-3xl text-lg md:text-xl mb-5">“Ваши права и законные интересы под надежной
+                                защитой!
                                 Комплексный
                                 подход к работе с
                                 физическими и юридическими лицами позволяет мне предложить вам высококачественные
                                 юридические услуги по доступным ценам.”</h2>
-                            <div>
+                            <div class="flex-shrink-0 flex-grow-0 mb-5">
                                 <img class="w-full h-full object-cover" src="./src/img/person/person-1.jpg" alt="">
                             </div>
-                            <p class="max-w-3xl text-xl">Быстрое реагирование, глубокое понимание
+                            <p class="max-w-3xl text-lg md:text-xl mb-5">Быстрое реагирование, глубокое понимание
                                 специфики вашей ситуации и умение находить нестандартные решения – мои основные
                                 преимущества как юриста. Доверьте мне решение ваших проблем, и я гарантирую
                                 профессиональный подход к делу и полную конфиденциальность.</p>
-                            <div>
+                            <div class="flex-shrink-0 flex-grow-0 mb-5">
                                 <img class="w-full h-full object-cover" src="./src/img/person/person-2.jpg" alt="">
                             </div>
-                            <p class="max-w-3xl text-xl">Мы предлагаем комплексное юридическое сопровождение для
+                            <p class="max-w-3xl text-lg md:text-xl mb-5">Мы предлагаем комплексное юридическое
+                                сопровождение
+                                для
                                 физических и юридических лиц,
                                 включая консультации, составление документов, представление интересов в суде и многое
                                 другое. Наша команда профессионалов имеет обширный опыт работы с различными сферами
                                 права, что позволяет нам предоставлять высококачественные услуги по доступным ценам.</p>
-                            <div>
+                            <div class="flex-shrink-0 flex-grow-0 mb-5">
                                 <img class="w-full h-full object-cover" src="./src/img/person/person-2.jpg" alt="">
                             </div>
-                            <p class="max-w-3xl text-xl">Мы гарантируем конфиденциальность и индивидуальный подход к
+                            <p class="max-w-3xl text-lg md:text-xl mb-5">Мы гарантируем конфиденциальность и
+                                индивидуальный
+                                подход к
                                 каждому клиенту.
                                 Присоединяйтесь к нашим довольным клиентам и ощутите преимущества работы с
                                 профессионалами!”</p>
@@ -162,7 +169,7 @@
                 </section>
             </div>
 
-            <section class="services py-10">
+            <!-- <section class="services py-10">
                 <div class="container">
                     <h2 class="text-4xl mb-6">Услуги</h2>
                     <div class="grid grid-cols-2 gap-16">
@@ -222,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
 
         <footer class="py-12 bg-orange">
