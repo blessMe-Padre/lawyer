@@ -1032,6 +1032,54 @@ button.swiper-pagination-bullet{
 
 /* faq end  */
 
+@supports(animation-timeline: view()) {
+  @keyframes move {
+    to {
+      /* Move horizontally so that right edge is aligned against the viewport */
+      transform: translateX(calc(-100% + 100vw));
+      left: 0px;
+    }
+  }
+
+  .sectionPin {
+    /* Stretch it out, so that we create room for the horizontal scroll animation */
+    height: 500vh;
+    overflow: visible;
+    /* To make position sticky work … */
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+  }
+
+  .pin-wrap-sticky {
+    /* Stick to Top */
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .pin-wrap {
+    display: flex;
+    height: 100vh;
+    width: 280vmax;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 70px 10vw;
+    gap: 80px;
+    /* Hook animation */
+    will-change: transform;
+    animation: linear move forwards;
+    /* Link animation to view-timeline */
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+  }
+
+  .pin-wrap img {
+    max-height: 400px;
+  }
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
@@ -1473,6 +1521,9 @@ body {
   color: #f2f2f2;
   background: #000000;
   font-weight: 400;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 *, ::before, ::after{
@@ -1656,6 +1707,22 @@ body {
   margin-right: 1rem;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1686,6 +1753,10 @@ body {
 
 .w-full{
   width: 100%;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
 }
 
 .grid-cols-2{
@@ -1728,6 +1799,18 @@ body {
   gap: 1.75rem;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-16{
+  gap: 4rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1740,6 +1823,10 @@ body {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-5{
+  padding: 1.25rem;
 }
 
 .px-4{
@@ -1777,6 +1864,30 @@ body {
 .text-9xl{
   font-size: 8rem;
   line-height: 1;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .text-main-black{
