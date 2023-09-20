@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <div class="h-screen grid grid-rows-[auto_1fr_auto]">
-        <header class="z-10 w-full md-28 transition-colors">
+    <div class="h-screen grid grid-rows-[auto_1fr_auto] wrapper">
+        <header class="z-10 w-full transition-colors">
+            <span class="absolute top-7 left-7 sm:hidden">ЛОГОТИП</span>
             <div class="container gap-5 items-center justify-between hidden md:flex md:pt-2">
                 <!-- <img class="h-24" loading="lazy" src="./src/img/logo.jpg" width="228" height="98" alt="лого"> -->
                 <span>ЛОГОТИП</span>
@@ -33,7 +34,8 @@
             <div class="flex flex-col items-start justify-between pt-20 overflow-hidden md:hidden">
                 <!-- <img loading="lazy" class="absolute top-5 left-5" src="./src/img/logo.jpg" width="114" height="48"
                     alt="лого"> -->
-                <div class="mobile-menu bg-metal">
+                <div class="mobile-menu bg-orange">
+                    <span>ЛОГОТИП</span>
                     <ul class="flex flex-col pb-11 text-main-black pt-4">
                         <li class="px-4 mb-4"><a class="text-white hover:text-orange transition-colors nav-link"
                                 href="#" data-goto=".page-section-1">Ссылка 1</a>
@@ -68,7 +70,7 @@
                 </div>
             </section>
 
-            <section class="person py-10">
+            <section class="person py-10 page-section-1">
                 <div class="container">
                     <div class="person__wrapper grid gap-7 md:grid-cols-2 mb-10">
                         <div>
@@ -96,7 +98,7 @@
                                 образования и профессионального развития. В 2019 году, он был удостоен престижной премии
                                 “Humanitarian of the Year” за свою деятельность в области защиты прав человека и
                                 поддержки нуждающихся.</p>
-                            <a class="person-button" href="#">Подробнее</a>
+                            <a class="person-button" href="person.html">Подробнее</a>
 
                         </div>
                     </div>
@@ -118,7 +120,7 @@
                                 В свободное от работы время, Питер Джонс занимается благотворительной деятельностью,
                                 поддерживая несколько благотворительных организаций, занимающихся помощью детям и
                                 молодежи.</p>
-                            <a class="person-button" href="#">Подробнее</a>
+                            <a class="person-button" href="person-2.html">Подробнее</a>
                         </div>
                         <div class="order-1 flex-auto md:order-2">
                             <img class="w-full max-h-[600px] md:h-full object-contain md:object-cover"
@@ -128,7 +130,7 @@
                 </div>
             </section>
 
-            <div class="container">
+            <div class="container page-section-2">
                 <section class="sectionPin">
                     <div class="pin-wrap-sticky">
                         <div class="pin-wrap">
@@ -172,7 +174,7 @@
                 </section>
             </div>
 
-            <section class="services py-10">
+            <section class="services py-10 page-section-3">
                 <div class="container">
                     <h2 class="text-4xl mb-6">Услуги</h2>
                     <div class="grid md:grid-cols-2 gap-16 _tabs">
@@ -245,7 +247,7 @@
                 </div>
             </section>
 
-            <section class="clients w-0 min-w-[100%] py-10">
+            <section class="clients w-0 min-w-[100%] py-10 page-section-4">
                 <div class="container">
                     <h2 class="text-4xl mb-6">Наши клиенты</h2>
                     <p class="sm:columns-2">Мы гордимся тем, что наша компания успешно сотрудничает с множеством
@@ -293,16 +295,14 @@
 
             <section class="contacts py-10">
                 <div class="container">
-                    <h2>Напишите нам</h2>
-                    <p>Когда вы сталкиваетесь с юридической дилеммой, будь то иск о телесных повреждениях или уголовное
-                        обвинение, вашим первым шагом должно стать доверие к знаниям и навыкам нашей компании</p>
-
                     <section class="form-section">
                         <div class="form-wrapper">
                             <form action="#" id="form" class="form__body validate-form">
-                                <h2 class="form__title">Понравился автомобиль?</h2>
-                                <p class="form__sub-title">Оставьте заявку, и мы предоставим вам полную
-                                    информацию о понравившемся авто</p>
+                                <h2 class="form__title">Напишите нам</h2>
+                                <p class="form__sub-title">Когда вы сталкиваетесь с юридической дилеммой, будь то иск о
+                                    телесных повреждениях или уголовное
+                                    обвинение, вашим первым шагом должно стать доверие к знаниям и навыкам нашей
+                                    компании</p>
 
                                 <div class="form-inner">
                                     <div class="form__item">
@@ -331,8 +331,6 @@
                     </section>
                 </div>
             </section>
-
-
         </main>
 
         <footer class="py-12 bg-orange">

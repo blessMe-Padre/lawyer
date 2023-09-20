@@ -85,10 +85,11 @@ textarea.form__input {
     transition: background-color 0.5s ease 0s;
     position: relative;
     top: 0;
+    background-color: #ec6633 !important;
 }
 
 .form__button:active {
-    top: 3px;
+    top: 2px;
     box-shadow: 0 2px 0 #161b13;
 }
 
@@ -103,6 +104,8 @@ textarea.form__input {
     align-items: center;
     justify-content: normal;
     flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 600px;
 }
 
 .form__item {
@@ -115,23 +118,9 @@ textarea.form__input {
 }
 
 textarea.form__input {
-    min-height: 20px;
+    min-height: 140px;
     resize: vertical;
     padding: 0 20px;
-}
-
-.form__button {
-    max-width: 295px;
-    min-height: 50px;
-    top: -15px;
-}
-
-.form__title {
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10px;
 }
 
 .form__sub-title {
@@ -150,7 +139,7 @@ textarea.form__input {
 }
 
 .form__title {
-    color: #1A1A1A;
+    color: #ffffff;
     font-size: 35px;
     font-style: normal;
     font-weight: 400;
@@ -158,14 +147,10 @@ textarea.form__input {
 }
 
 .form__sub-title {
-    color: rgba(0, 0, 0, 0.60);
+    color: #ffffff;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     max-width: 70%;
-}
-
-.form__button {
-    margin-top: 35px;
 }

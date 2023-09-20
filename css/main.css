@@ -92,7 +92,7 @@
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: 80px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -104,6 +104,12 @@
   opacity: 1;
   visibility: visible;
   z-index: 999;
+}
+
+.btn-close-menu {
+  z-index: 999;
+  top: 20px !important;
+  right: 40px !important;
 }
 
 /**
@@ -906,10 +912,11 @@ textarea.form__input {
   transition: background-color 0.5s ease 0s;
   position: relative;
   top: 0;
+  background-color: #ec6633 !important;
 }
 
 .form__button:active {
-  top: 3px;
+  top: 2px;
   box-shadow: 0 2px 0 #161b13;
 }
 
@@ -924,6 +931,8 @@ textarea.form__input {
   align-items: center;
   justify-content: normal;
   flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 600px;
 }
 
 .form__item {
@@ -936,23 +945,9 @@ textarea.form__input {
 }
 
 textarea.form__input {
-  min-height: 20px;
+  min-height: 140px;
   resize: vertical;
   padding: 0 20px;
-}
-
-.form__button {
-  max-width: 295px;
-  min-height: 50px;
-  top: -15px;
-}
-
-.form__title {
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 10px;
 }
 
 .form__sub-title {
@@ -971,7 +966,7 @@ textarea.form__input {
 }
 
 .form__title {
-  color: #1A1A1A;
+  color: #ffffff;
   font-size: 35px;
   font-style: normal;
   font-weight: 400;
@@ -979,7 +974,7 @@ textarea.form__input {
 }
 
 .form__sub-title {
-  color: rgba(0, 0, 0, 0.60);
+  color: #ffffff;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -987,8 +982,104 @@ textarea.form__input {
   max-width: 70%;
 }
 
-.form__button {
-  margin-top: 35px;
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 16, 27, .7);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: opacity 0.3s ease;
+  z-index: -2;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 70;
+}
+
+.popup__body {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 430px;
+  max-width: 1024px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.popup__title {
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 30px;
+}
+
+.popup__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.popup__btn {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.popup__btn:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.popup__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 40px;
+}
+
+.popup__img {
+  position: relative;
+}
+
+.popup__img img {
+  margin: 0 auto;
+}
+
+.popup__img-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  padding: 10px 0;
+  background-color: red;
 }
 
 /* Импорт TailWind */
@@ -1585,12 +1676,20 @@ body {
   left: 1.25rem;
 }
 
+.left-7{
+  left: 1.75rem;
+}
+
 .right-5{
   right: 1.25rem;
 }
 
 .top-5{
   top: 1.25rem;
+}
+
+.top-7{
+  top: 1.75rem;
 }
 
 .z-10{
@@ -1762,6 +1861,10 @@ body {
   overflow: hidden;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .bg-orange{
   --tw-bg-opacity: 1;
   background-color: rgb(236 102 51 / var(--tw-bg-opacity));
@@ -1770,6 +1873,10 @@ body {
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .p-5{
@@ -1827,6 +1934,11 @@ body {
   line-height: 1.75rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -1843,6 +1955,10 @@ body {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .transition-colors{
@@ -1940,6 +2056,10 @@ body {
     display: grid;
   }
 
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:columns-2{
     -moz-columns: 2;
          columns: 2;
@@ -1973,6 +2093,10 @@ body {
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:object-cover{
